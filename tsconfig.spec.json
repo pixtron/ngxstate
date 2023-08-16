@@ -1,0 +1,12 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+// TODO pixtron - this file can be removed once https://github.com/just-jeb/angular-builders/issues/1408 has been fixed.
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "outDir": "./out-tsc/spec",
+    "types": ["jest"]
+  },
+  "include": ["**/*.spec.ts", "**/*.d.ts"]
+}

@@ -1,0 +1,75 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "**/*.typegen.ts"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "prettier"
+      ],
+      "plugins": [
+        "unused-imports",
+        "simple-import-sort"
+      ],
+      "rules": {
+        "no-empty-function": ["error"],
+        "lines-between-class-members": ["error", "always"],
+        "no-console": ["error", {"allow": ["warn", "error"]}],
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+		    "unused-imports/no-unused-imports": "error",
+		    "unused-imports/no-unused-vars": [
+			    "warn",
+			    { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+		    ],
+        "simple-import-sort/imports": [
+          "error",
+          {
+            "groups": [
+              ["^@angular"],
+              ["^@?\\w"],
+              ["^src/"],
+              ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+              ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+              ["^"]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended",
+        "plugin:@angular-eslint/template/accessibility"
+      ],
+      "rules": {}
+    },
+    {
+      "files": [
+        "*.js"
+      ],
+      "extends": [
+        "eslint:recommended",
+        "prettier"
+      ],
+      "parserOptions": {
+        "ecmaVersion": "latest"
+      },
+      "env": {
+        "es6": true,
+        "node": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "css.validate": false,
+  "scss.validate": false,
+  // disabled because: https://github.com/microsoft/vscode/issues/47299
+  "javascript.suggestionActions.enabled": false,
+  "stylelint.validate": ["css", "scss"],
+  "[html]": {
+    "editor.codeActionsOnSave": [
+      "source.formatDocument",
+      "source.fixAll.eslint"
+    ],
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.codeActionsOnSave": [
+      "source.formatDocument",
+      "source.fixAll.eslint"
+    ],
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.codeActionsOnSave": [
+      "source.formatDocument",
+      "source.fixAll.eslint"
+    ],
+    "editor.formatOnSave": false
+  },
+  "[scss]": {
+    "editor.codeActionsOnSave": [
+      "source.formatDocument",
+      "source.fixAll.stylelint"
+    ],
+    "editor.formatOnSave": false
+  }
+}
