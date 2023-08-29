@@ -1,3 +1,6 @@
+import { assertInInjectionContext, Signal } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+
 import {
   defer,
   distinctUntilChanged,
@@ -28,4 +31,19 @@ export function useSelector<
       distinctUntilChanged(comparator)
     )
   );
+}
+
+export function useSignalSelector<
+  TActor extends AnyActorRef,
+  T,
+  TEmitted = TActor extends Subscribable<infer Emitted> ? Emitted : never,
+>(
+  actor: TActor,
+  projector: (emitted: TEmitted) => T,
+  comparator: Comparator<T> = defaultComparator
+): Signal<T> {
+  assertInInjectionContext(useSignalSelector);
+  return toSignal(useSelector(actor, projector, comparator), {
+    requireSync: true,
+  });
 }
