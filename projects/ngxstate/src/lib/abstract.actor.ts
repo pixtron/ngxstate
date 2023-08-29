@@ -22,9 +22,9 @@ export abstract class AbstractActor<
 > {
   public abstract readonly actor: InterpreterFrom<TMachine>;
 
-  private readonly injector = inject(Injector);
+  protected readonly injector = inject(Injector);
 
-  private _state$: Observable<State> | null = null;
+  protected _state$: Observable<State> | null = null;
 
   pipe<A>(op1: OperatorFunction<State, A>): Observable<A>;
 
