@@ -1,4 +1,4 @@
-# Ngxstate
+# @pxtrn/ngxstate
 
 This library contains utilities for using [XState](https://github.com/statelyai/xstate) with [Angular](https://github.com/angular/angular#readme).
 
@@ -9,7 +9,7 @@ This library contains utilities for using [XState](https://github.com/statelyai/
 ```ts
 import { Component, Injectable } from '@angular/core';
 import { createMachine, assign } from 'xstate';
-import { AbstractActor, useActor } from 'ngxstate';
+import { AbstractActor, useActor } from '@pxtrn/ngxstate';
 
 const counterMachine = createMachine({
   context: {
@@ -51,7 +51,7 @@ export class MyComponent {
 ```ts
 import { Injectable } from '@angular/core';
 import { createMachine, assign } from 'xstate';
-import { AbstractActor, AbstractImplementation, useActor } from 'ngxstate';
+import { AbstractActor, AbstractImplementation, useActor } from '@pxtrn/ngxstate';
 
 const counterMachine = createMachine({
   context: {

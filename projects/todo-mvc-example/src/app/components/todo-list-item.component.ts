@@ -9,7 +9,11 @@ import {
   Signal,
 } from '@angular/core';
 
-import { objectShallowEqual, useSelector, useSignalSelector } from 'ngxstate';
+import {
+  objectShallowEqual,
+  useSelector,
+  useSignalSelector,
+} from '@pxtrn/ngxstate';
 import { Observable } from 'rxjs';
 import { ActorRefFrom } from 'xstate';
 

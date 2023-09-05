@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
-import { AbstractActor, useActor } from 'ngxstate';
+import { AbstractActor, useActor } from '@pxtrn/ngxstate';
 import { filter, map } from 'rxjs';
 
 import { Filter } from '../models';

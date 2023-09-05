@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 
-import { arrayShallowEqual } from 'ngxstate';
+import { arrayShallowEqual } from '@pxtrn/ngxstate';
 import { distinctUntilChanged, map } from 'rxjs';
 
 import { TodosActor } from '../actors/todos.actor';

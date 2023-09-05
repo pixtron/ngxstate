@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { AbstractActor, useActor } from 'ngxstate';
+import { AbstractActor, useActor } from '@pxtrn/ngxstate';
 
 import { counterMachine } from './counter.machine';
 

@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ngxstate
+ * Public API Surface of @pxtrn/ngxstate
  */
 
 export { AbstractActor } from './lib/abstract.actor';
