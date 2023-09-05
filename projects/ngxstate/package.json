@@ -1,6 +1,6 @@
 {
   "name": "ngxstate",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A wrapper library to make using XState state machines in Angular easier",
   "keywords": [
     "angular",
